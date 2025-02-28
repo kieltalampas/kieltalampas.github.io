@@ -7,7 +7,7 @@
 }
 :root{
     --pc:#93C5FD;
-    --accent: rgba(106, 156, 221, 0.4);
+    --accent: rgba(165, 180, 201, 0.3);
 }
 
 .target_bg{
@@ -182,7 +182,7 @@ body {
     font-family: "Press Start 2P", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 15px;
+    font-size: 13px;
     white-space: nowrap;
     color: #DBEAFE;
     text-decoration: none;

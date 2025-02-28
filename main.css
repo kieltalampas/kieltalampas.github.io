@@ -12,7 +12,7 @@
     font-family: "Press Start 2P", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 17px;
     color: var(--pc);
 }
 
@@ -29,6 +29,7 @@
     align-items: center;
     gap: 8px;
     font-size: 14px;
+    font-weight: bold;
     margin-right: 10px;
     border-radius: 30px;
     padding: 3px 10px 3px 10px;
@@ -37,7 +38,7 @@
 }
 
 .skill i {
-    font-size: 20px;
+    font-size: 23px;
     color: var(--pc);
     
 }
@@ -53,6 +54,20 @@
     display: flex;
     margin-bottom: 15px;
 }
+
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.exp1{
+    border-left: 2px solid rgb(114, 108, 108, 0.4);
+    padding-left: 30px;
+}
+
+
 
 @media (max-width: 600px) {
     .backend, .database, .cloud {
