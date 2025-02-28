@@ -11,12 +11,17 @@
 }
 
 .target_bg{
-    opacity: 0.2;
+    opacity: 0.3;
     position: fixed;
     inset: 0;
     z-index: -1;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+  
 
 
 body {
@@ -47,7 +52,7 @@ body {
 .dashboard-main {
     grid-area: main;
     padding: 1.25rem;
-    overflow-y: auto;
+    
 
 }
 
