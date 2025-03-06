@@ -10,12 +10,14 @@
     --accent: rgba(165, 180, 201, 0.3);
 }
 
-.target_bg{
-    opacity: 0.3;
-    position: fixed;
-    inset: 0;
-    z-index: -1;
+.target_bg {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 9999 !important; 
+    opacity: 0.3 !important;
+    pointer-events: none; 
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -45,6 +47,7 @@ body {
     top: 0;
     bottom: 0;
     width: 40%; 
+    background-color: #030615;
     
 
 }
@@ -52,6 +55,8 @@ body {
 .dashboard-main {
     grid-area: main;
     padding: 1.25rem;
+    background-color: #030615;
+
     
 
 }
