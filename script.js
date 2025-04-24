@@ -22,24 +22,15 @@ document.addEventListener("mousemove", moveRadialBGColor, { passive: true });
 requestAnimationFrame(updateBackground);
 
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("main .wrapper > div");
-    const navLinks = document.querySelectorAll(".sidebar-nav a");
+    const navLinks = document.querySelectorAll(".sidebar-nav li");
 
-    window.addEventListener("scroll", () => {
-        let current = "";
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
 
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop - 100;
-            if (window.scrollY >= sectionTop) {
-                current = section.getAttribute("id");
-            }
-        });
+            navLinks.forEach((item) => item.classList.remove("active"));
 
-        navLinks.forEach((link) => {
-            link.parentElement.classList.remove("active");
-            if (link.getAttribute("href").includes(current)) {
-                link.parentElement.classList.add("active");
-            }
+
+            this.classList.add("active");
         });
     });
 });

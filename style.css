@@ -40,6 +40,9 @@ body {
 
 }
 
+
+
+
 .dashboard-sidebar {
     grid-area: sidebar;
     color: #fff;
@@ -173,17 +176,16 @@ body {
 
 }
 
+
 .sidebar-nav li {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     opacity: 0.6;
     transition: opacity 0.3s ease;
-    
-    
 }
 
-.sidebar-nav a{
+.sidebar-nav a {
     font-family: "Press Start 2P", serif;
     font-weight: 400;
     font-style: normal;
@@ -191,18 +193,17 @@ body {
     white-space: nowrap;
     color: #DBEAFE;
     text-decoration: none;
-    
 }
-
 
 
 .sidebar-nav li.active {
     opacity: 1;
 }
-  
+
 .sidebar-nav li.active .nav-dot {
     background-color: var(--pc);
 }
+
   
 .nav-dot {
     width: 8px;
@@ -219,6 +220,90 @@ body {
     opacity: 0.8;
     cursor: pointer;
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    padding: 40px;
+    color: white;
+    height: 100%;
+}
+
+.section {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: var(--pc);
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    border-radius: 30px;
+    padding: 3px 10px 3px 10px;
+    background-color: rgb(42, 39, 39, 0.8);
+    
+}
+
+.skill i {
+    font-size: 23px;
+    color: var(--pc);
+    
+}
+
+.be, .db, .devops{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(215, 208, 208);
+
+}
+
+.backend, .database, .cloud{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.exp1{
+    border-left: 2px solid rgb(114, 108, 108, 0.4);
+    padding-left: 30px;
+}
+
+
+
+@media (max-width: 600px) {
+    .backend, .database, .cloud {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .skills-list {
+        align-items: start;
+    }
+}
+
 
 
 @media (max-width: 1024px) { 
