@@ -520,28 +520,46 @@ display: flex;
     margin: 0;
 }
 
-.cert-list {
-    list-style: none;
-    padding: 0;
-    margin: 8px 0 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
 .cert-list li {
     font-size: 13px;
     color: var(--text-secondary);
-    padding-left: 16px;
+    padding-left: 0;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .cert-list li::before {
     content: '✓';
-    position: absolute;
-    left: 0;
     color: var(--primary);
     font-weight: bold;
+    flex-shrink: 0;
+}
+
+.cert-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.cert-link:hover {
+    color: var(--primary);
+}
+
+.arrow {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+    color: var(--primary);  
+    font-weight: bold;      
+}
+
+.cert-link:hover .arrow {
+    transform: translate(2px, -2px);
 }
 
 /* ===== RESPONSIVE ===== */
