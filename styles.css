@@ -476,15 +476,6 @@ display: flex;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--primary-border);
-    transition: transform 0.3s ease;
-}
-
-.education-item.edu-item-layout:hover .edu-logo {
-    transform: scale(1.05);
-}
-
-.education-item.edu-item-layout:hover {
-    border-left-color: transparent;
 }
 
 .edu-content {
