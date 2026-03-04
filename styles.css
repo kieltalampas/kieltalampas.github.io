@@ -436,17 +436,6 @@ display: flex;
     padding-left: 24px; 
 }
 
-/* .education-item.edu-item-layout::before {
-    content: '';
-    position: absolute;
-    left: -27px;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    background: var(--primary);
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(147, 197, 253, 0.4);
-} */
 
 .education-item.edu-cert-item {
     padding: 20px;
@@ -454,17 +443,6 @@ display: flex;
     border-left: 2px solid var(--border-strong);
 }
 
-/* .education-item.edu-cert-item::before {
-    content: '';
-    position: absolute;
-    left: -7px;
-    top: 24px;
-    width: 12px;
-    height: 12px;
-    background: var(--primary);
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(147, 197, 253, 0.4);
-} */
 
 .edu-logo-wrapper {
     flex-shrink: 0;
