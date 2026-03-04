@@ -1,41 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".sidebar-nav li");
-    const sections = document.querySelectorAll("#about, #experience, #projects");
-
-    // Click handler
-    navLinks.forEach((link) => {
-        link.addEventListener("click", function () {
-            navLinks.forEach((item) => item.classList.remove("active"));
-            this.classList.add("active");
+    // Add smooth scroll behavior for action buttons
+    document.querySelectorAll(".action-buttons a").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            if (href.startsWith("#")) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
+            }
         });
     });
+});
 
-    // Scroll spy
-    function updateActiveNav() {
-        let current = "";
-        
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Handle action buttons
+    document.querySelectorAll(".action-buttons a").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
             
-            if (window.pageYOffset >= sectionTop - 200) {
-                current = section.getAttribute("id");
+            // Resume download
+            if (this.classList.contains("btn-resume")) {
+                e.preventDefault();
+                const link = document.createElement("a");
+                link.href = "assets/Talampas_Ezekiel_Resume.pdf"; // UPDATE WITH YOUR RESUME NAME
+                link.download = "Talampas_Ezekiel_Resume.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                return;
             }
-        });
-
-        navLinks.forEach((link) => {
-            link.classList.remove("active");
-            const href = link.querySelector("a").getAttribute("href");
             
-            if (href === `#${current}`) {
-                link.classList.add("active");
+            if (href.startsWith("#")) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
             }
+            
         });
-    }
-
-    // Listen to scroll event
-    window.addEventListener("scroll", updateActiveNav);
-    
-    // Initial call
-    updateActiveNav();
+    });
 });
