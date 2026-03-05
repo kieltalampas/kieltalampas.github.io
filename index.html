@@ -5,223 +5,287 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ezekiel Talampas - Data Engineering Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/7e7c33f17d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script src="https://kit.fontawesome.com/7e7c33f17d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap">
 </head>
 <body>
+    <!-- Header/Top Bar -->
+    <header>
+        <div class="logo">Ezekiel Talampas</div>
+        <div class="header-actions">
+            <a href="https://github.com/kieltalampas" class="header-btn" target="_blank" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:kieltalampas@outlook.com" class="header-btn" title="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-    <aside class="dashboard-sidebar">
-        <div class="profile-container">
-            <div class="profile-content">
-                <img class="profile-image" src="https://i.pinimg.com/736x/fd/90/2f/fd902f84d2e6370a721ca36b2c7a11b1.jpg" alt="Ezekiel Talampas">
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#projects" class="nav-link"><i class="fa-solid fa-code"></i> Projects</a></li>
+            <li><a href="#skills" class="nav-link"><i class="fa-solid fa-star"></i> Skills</a></li>
+            <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#contact" class="nav-link"><i class="fa-solid fa-phone"></i> Contact</a></li>
+        </ul>
+    </nav>
 
-                <div class="profile-info">
-                    <h1 class="profile-name">Ezekiel Talampas</h1>
-                    <p class="profile-title">Data Engineering</p>
-                    <p class="profile-subtitle">Computer Science student building end-to-end cloud data pipelines using Azure Data Factory, Databricks, and Delta Lake.</p>
-
-                    <div class="profile-location">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Cavite, Philippines</span>
+    <!-- Main Content -->
+    <main>
+        <div class="content-wrapper">
+            <!-- Hero Section -->
+            <section id="hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Hi, I'm <span>Kiel</span></h1>
+                        <p class="hero-subtitle">Data Engineering | Cloud & Analytics</p>
+                        <p class="hero-description">
+                            Computer Science student building end-to-end cloud data pipelines using Azure Data Factory, Databricks, and Delta Lake.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                View My Work
+                            </a>
+                            <a href="assets/Talampas_Ezekiel_Resume.pdf" class="btn btn-secondary" download>
+                                <i class="fa-solid fa-download"></i>
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://i.pinimg.com/736x/fd/90/2f/fd902f84d2e6370a721ca36b2c7a11b1.jpg" alt="Ezekiel Talampas">
                     </div>
                 </div>
+            </section>
 
-            <div class="action-buttons">
-                <a href="#" class="btn btn-resume">
-                    <i class="fa-solid fa-file-arrow-down"></i>
-                    Resume
-                </a>
-                <a href="https://github.com/kieltalampas" class="btn btn-icon-only" title="GitHub" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://outlook.live.com/mail/0/compose?kieltalampas@outlook.com" class="btn btn-icon-only" title="Email" target="_blank">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/ezekielctalampas/" class="btn btn-icon-only" title="LinkedIn" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </div>
-            </div>
-
-
-        </div>
-    </aside>
-
-    <main class="dashboard-main">
-        <div class="main-content">
-
-            <!-- PROJECTS SECTION -->
-            <section id="projects" class="content-section">
+            <!-- Projects Section -->
+            <section id="projects">
                 <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-
+                <div class="projects-list">
                     <!-- Stock Project -->
-                    <article class="project-card">
-                        <div class="card-header">
-                            <h3 class="card-title">Stock Price Analytics Pipeline</h3>
-                            <div class="card-links">
-                                <a href="https://github.com/kieltalampas/stock-price-analytics-pipeline" class="card-link" target="_blank" rel="noopener">
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="assets/proj1.png" alt="Stock Price Analytics Pipeline">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Stock Price Analytics Pipeline</h3>
+                                <a href="https://github.com/kieltalampas/stock-price-analytics-pipeline" class="project-link" target="_blank">
                                     <i class="fa-brands fa-github"></i>
-                                    <span>Code</span>
+                                    View Code
                                 </a>
                             </div>
+                            <p class="project-description">
+                                End-to-end analytics pipeline transforming raw stock market data into optimized 
+                                dimensional models using the medallion architecture pattern for analytics performance.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Databricks</span>
+                                <span class="tag">Delta Live Tables</span>
+                                <span class="tag">Snowflake</span>
+                                <span class="tag">Power BI</span>
+                            </div>
+                            <ul class="project-highlights">
+                                <li>Built Bronze → Silver → Gold transformations using Delta Live Tables</li>
+                                <li>Implemented fact and dimension tables for analytics optimization</li>
+                                <li>Loaded curated data into Snowflake for BI reporting</li>
+                            </ul>
                         </div>
-
-                        <div class="card-tags">
-                            <span class="tag">Databricks</span>
-                            <span class="tag">Delta Live Tables</span>
-                            <span class="tag">Snowflake</span>
-                            <span class="tag">Power BI</span>
-                        </div>
-
-                        <p class="card-description">
-                            End-to-end analytics pipeline transforming raw stock data into dimensional models using medallion architecture.
-                        </p>
-
-                        <ul class="card-highlights">
-                            <li>Built Bronze → Silver → Gold transformations using Delta Live Tables</li>
-                            <li>Implemented fact and dimension tables for analytics optimization</li>
-                            <li>Loaded curated data into Snowflake for BI reporting</li>
-                        </ul>
-                    </article>
+                    </div>
 
                     <!-- Spotify Project -->
-                    <article class="project-card">
-                        <div class="card-header">
-                            <h3 class="card-title">Azure Spotify Data Engineering Pipeline</h3>
-                            <div class="card-links">
-                                <a href="https://github.com/kieltalampas/azure-spotify-project" class="card-link" target="_blank" rel="noopener">
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="assets/proj2.png" alt="Azure Spotify Pipeline">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Azure Spotify Data Pipeline</h3>
+                                <a href="https://github.com/kieltalampas/azure-spotify-project" class="project-link" target="_blank">
                                     <i class="fa-brands fa-github"></i>
-                                    <span>Code</span>
+                                    View Code
                                 </a>
                             </div>
+                            <p class="project-description">
+                                Cloud-native incremental data pipeline leveraging Azure services and Databricks 
+                                for efficient large-scale data processing with quality enforcement.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Azure Data Factory</span>
+                                <span class="tag">Azure Databricks</span>
+                                <span class="tag">Delta Lake</span>
+                                <span class="tag">Unity Catalog</span>
+                            </div>
+                            <ul class="project-highlights">
+                                <li>Designed watermark-based incremental ingestion from Azure SQL</li>
+                                <li>Processed data using PySpark and Auto Loader for automation</li>
+                                <li>Implemented star schema modeling with data quality expectations</li>
+                            </ul>
                         </div>
-
-                        <div class="card-tags">
-                            <span class="tag">Azure Data Factory</span>
-                            <span class="tag">Azure Databricks</span>
-                            <span class="tag">Delta Lake</span>
-                            <span class="tag">Unity Catalog</span>
-                        </div>
-
-                        <p class="card-description">
-                            Cloud-native incremental data pipeline using Azure services and Databricks.
-                        </p>
-
-                        <ul class="card-highlights">
-                            <li>Designed watermark-based incremental ingestion from Azure SQL</li>
-                            <li>Processed data using PySpark and Auto Loader</li>
-                            <li>Implemented star schema modeling with data quality expectations</li>
-                        </ul>
-                    </article>
+                    </div>
                 </div>
             </section>
 
-            <!-- SKILLS SECTION -->
-            <section id="skills" class="content-section">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-container">
-
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Languages</h3>
-                        <div class="skill-group">
-                            <div class="skill-badge">
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
                                 <i class="devicon-python-plain colored"></i>
-                                <span>Python</span>
+                                <span class="skill-name">Python</span>
                             </div>
-                            <div class="skill-badge">
-                                <img src="assets\postgre.png" alt="PostgreSQL" class="skill-logo-img">
-                                <span>PostgreSQL</span>
+                            <div class="skill-item">
+                                <i class="devicon-mysql-plain colored"></i>
+                                <span class="skill-name">SQL</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Data Engineering</h3>
-                        <div class="skill-group">
-                            <div class="skill-badge">
+                    <!-- Data Engineering -->
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Data Engineering</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
                                 <i class="devicon-apachespark-original colored"></i>
-                                <span>PySpark</span>
+                                <span class="skill-name">PySpark</span>
                             </div>
-                            <div class="skill-badge databricks-badge">
-                                <img src="assets\db.png" alt="Databricks" class="skill-logo-img">
-                                <span>Databricks</span>
+                            <div class="skill-item">
+                                <img src="assets/db.png" alt="Databricks" class="skill-logo-img">
+                                <span class="skill-name">Databricks</span>
                             </div>
-                            <div class="skill-badge">
-                                <img src="assets\delta.png" alt="Deltalake" class="skill-logo-img">
-                                <span>Delta Lake</span>
+                            <div class="skill-item">
+                                <img src="assets/delta.png" alt="Delta Lake" class="skill-logo-img">
+                                <span class="skill-name">Delta Lake</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Cloud & Warehousing</h3>
-                        <div class="skill-group">
-                            <div class="skill-badge">
+                    <!-- Cloud & Warehousing -->
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Cloud & Warehousing</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
                                 <i class="devicon-azure-plain colored"></i>
-                                <span>Azure (ADF, ADLS, SQL)</span>
+                                <span class="skill-name">Azure (ADF, ADLS, SQL)</span>
                             </div>
-                            <div class="skill-badge snowflake-badge">
-                                <img src="assets\snowflake.png" alt="Snowflake" class="skill-logo-img">
-                                <span>Snowflake</span>
+                            <div class="skill-item">
+                                <img src="assets/snowflake.png" alt="Snowflake" class="skill-logo-img">
+                                <span class="skill-name">Snowflake</span>
                             </div>
-                            <div class="skill-badge">
+                            <div class="skill-item">
                                 <i class="devicon-git-plain colored"></i>
-                                <span>Git</span>
+                                <span class="skill-name">Git</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Visualization</h3>
-                        <div class="skill-group">
-                            <div class="skill-badge powerbi-badge">
-                                <img src="assets\powerbi.png" alt="Power BI" class="skill-logo-img">
-                                <span>Power BI</span>
+                    <!-- Visualization -->
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Visualization</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <img src="assets/powerbi.png" alt="Power BI" class="skill-logo-img">
+                                <span class="skill-name">Power BI</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- EDUCATION SECTION -->
-            <section id="education" class="content-section">
+            <!-- Education Section -->
+            <section id="education">
                 <h2 class="section-title">Education & Certifications</h2>
                 <div class="education-list">
-                    <div class="education-item edu-item-layout">
-                        <div class="edu-logo-wrapper">
-                            <img src="assets\schoollogo.png" alt="Mapua Malayan Colleges Laguna" class="edu-logo">
+                    <!-- School -->
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <img src="assets/schoollogo.png" alt="MMCL">
                         </div>
-                        <div class="edu-content">
-                            <h3 class="edu-title">BS Computer Science</h3>
-                            <p class="edu-subtitle">Data Science & Analytics</p>
-                            <p class="edu-school">Mapua Malayan Colleges Laguna</p>
-                            <p class="edu-date">2022 – 2026</p>
+                        <div class="education-info">
+                            <h3 class="education-title">BS Computer Science</h3>
+                            <p class="education-subtitle">Data Science & Analytics</p>
+                            <p class="education-school">Mapua Malayan Colleges Laguna</p>
+                            <p class="education-date">2022 – 2026</p>
                         </div>
                     </div>
 
-                    <div class="education-item edu-cert-item">
-                        <h3 class="edu-title">Certifications</h3>
-                        <ul class="cert-list">
-                            <li>
-                                <a href="https://www.skills.google/public_profiles/b4b4b211-51b9-46d9-b6ff-4ba94ef68c7e/badges/8913300" target="_blank" class="cert-link">
-                                    Google Cloud Fundamentals
-                                    <span class="arrow">↗</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://coursera.org/share/0552050371115d14768885c8f786a010" target="_blank" class="cert-link">
-                                    Google Cybersecurity Professional Certificate
-                                    <span class="arrow">↗</span>
-                                </a>
-                            </li>
-                        </ul>
+                    <!-- Certifications -->
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <div class="education-info">
+                            <h3 class="education-title">Professional Certifications</h3>
+                            <ul class="cert-list">
+                                <li class="cert-item">
+                                    <span class="cert-name">Google Cloud Fundamentals</span>
+                                    <a href="https://www.skills.google/public_profiles/b4b4b211-51b9-46d9-b6ff-4ba94ef68c7e/badges/8913300" target="_blank" class="cert-link">
+                                        Verify <span class="arrow">↗</span>
+                                    </a>
+                                </li>
+                                <li class="cert-item">
+                                    <span class="cert-name">Google Cybersecurity Professional</span>
+                                    <a href="https://coursera.org/share/0552050371115d14768885c8f786a010" target="_blank" class="cert-link">
+                                        Verify <span class="arrow">↗</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Contact Section -->
+            <section id="contact">
+                <br>
+                <br>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <p class="contact-description">
+                        I'm always interested in hearing about new projects and opportunities. 
+                        Feel free to reach out through any of these channels!
+                    </p>
+                    <div class="contact-buttons">
+                        <a href="assets/Talampas_Ezekiel_Resume.pdf" class="contact-btn" download>
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Resume
+                        </a>
+                        <a href="https://github.com/kieltalampas" class="contact-btn" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="mailto:kieltalampas@outlook.com" class="contact-btn" target="_blank">
+                            <i class="fa-solid fa-envelope"></i>
+                            Email
+                        </a>
+                        <a href="https://www.linkedin.com/in/ezekielctalampas/" class="contact-btn" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ezekiel Talampas. All rights reserved. | Made with passion for data engineering</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
