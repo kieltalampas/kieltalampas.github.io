@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            var theme = localStorage.getItem("theme");
+            if (!theme) theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+    <title>All Projects - Ezekiel Talampas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+    <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap">
+    <script src="https://kit.fontawesome.com/7e7c33f17d.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Kiel<span>.</span></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="internship.html" class="nav-link">Internship</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <a href="https://github.com/kieltalampas" class="header-btn" target="_blank" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <a href="index.html" class="project-link" style="margin-bottom: 2rem; display: inline-flex;">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to portfolio
+            </a>
+
+            <section id="all-projects">
+                <h1 class="section-title">All Projects</h1>
+                <div class="projects-list">
+                    <!-- AQI Project -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="assets/aqi.png" alt="AQI Prediction System">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">AQI Prediction System</h3>
+                                <a href="https://github.com/kieltalampas/aqi-prediction-system" class="project-link" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                            <p class="project-description">
+                                Web-based Air Quality Index classification system built with machine learning
+                                and real-world air pollution data to predict AQI severity from atmospheric pollutant inputs.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
+                                <span class="tag"><i class="devicon-scikitlearn-plain colored"></i> Scikit-learn</span>
+                            </div>
+                            <ul class="project-highlights">
+                                <li>Trained Gaussian Naive Bayes classifier to predict Air Quality Index across 6 severity categories</li>
+                                <li>Applied information gain analysis to rank feature importance of 4 pollutants (PM2.5, O₃, NO₂, CO)</li>
+                                <li>Built multi-page interface with real-time prediction, feature analysis, and history tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Stock Project -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="assets/proj1.png" alt="Stock Price Analytics Pipeline">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Stock Price Analytics Pipeline</h3>
+                                <a href="https://github.com/kieltalampas/stock-price-analytics-pipeline" class="project-link" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                            <p class="project-description">
+                                End-to-end analytics pipeline transforming raw stock market data into optimized
+                                dimensional models using the medallion architecture pattern for analytics performance.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag"><img src="assets/db.png" alt=""> Databricks</span>
+                                <span class="tag"><i class="devicon-apachespark-original colored"></i> PySpark</span>
+                                <span class="tag"><img src="assets/snowflake.png" alt=""> Snowflake</span>
+                                <span class="tag"><img src="assets/powerbi.png" alt=""> Power BI</span>
+                            </div>
+                            <ul class="project-highlights">
+                                <li>Built Bronze → Silver → Gold transformations using Delta Live Tables</li>
+                                <li>Implemented fact and dimension tables for analytics optimization</li>
+                                <li>Loaded curated data into Snowflake for BI reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Spotify Project -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="assets/proj2.png" alt="Azure Spotify Pipeline">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Azure Spotify Data Pipeline</h3>
+                                <a href="https://github.com/kieltalampas/azure-spotify-project" class="project-link" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                            <p class="project-description">
+                                Cloud-native incremental data pipeline leveraging Azure services and Databricks
+                                for efficient large-scale data processing with quality enforcement.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag"><i class="devicon-azure-plain colored"></i> Azure Data Factory</span>
+                                <span class="tag"><img src="assets/db.png" alt=""> Databricks</span>
+                            </div>
+                            <ul class="project-highlights">
+                                <li>Designed watermark-based incremental ingestion from Azure SQL</li>
+                                <li>Processed data using PySpark and Auto Loader for automation</li>
+                                <li>Implemented star schema modeling with data quality expectations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Airbnb Project -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="assets/proj3.png" alt="Airbnb NYC Analytics Dashboard">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Airbnb NYC Analytics Dashboard</h3>
+                                <a href="https://github.com/kieltalampas/airbnb-nyc-analytics" class="project-link" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                            <p class="project-description">
+                                Interactive analytics dashboard analyzing 41,697 NYC Airbnb listings with multi-dimensional
+                                insights using cloud data warehouse and business intelligence tools.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag"><img src="assets/snowflake.png" alt=""> Snowflake</span>
+                                <span class="tag"><img src="assets/powerbi.png" alt=""> Power BI</span>
+                                <span class="tag"><i class="devicon-mysql-plain colored"></i> SQL</span>
+                            </div>
+                            <ul class="project-highlights">
+                                <li>Loaded 41,697 listings into Snowflake cloud data warehouse</li>
+                                <li>Created 8+ visualizations tracking market metrics across neighborhoods and room types</li>
+                                <li>Implemented interactive filters for stakeholder drill-down analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ezekiel Talampas. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

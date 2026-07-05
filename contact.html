@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            var theme = localStorage.getItem("theme");
+            if (!theme) theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+    <title>Contact - Ezekiel Talampas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+    <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap">
+    <script src="https://kit.fontawesome.com/7e7c33f17d.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Kiel<span>.</span></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="internship.html" class="nav-link">Internship</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <a href="https://github.com/kieltalampas" class="header-btn" target="_blank" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section id="contact">
+                <h1 class="section-title">Get In Touch</h1>
+                <div class="contact-content">
+                    <p class="contact-description">
+                        I'm always interested in hearing about new projects and opportunities.
+                        Send me a message below, or reach out directly through any of these channels.
+                    </p>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="contact-form-row">
+                            <input type="text" id="contactName" name="name" placeholder="Name" required>
+                            <input type="email" id="contactEmail" name="email" placeholder="Email" required>
+                        </div>
+                        <textarea id="contactMessage" name="message" placeholder="What would you like to talk about?" required></textarea>
+                        <button type="submit" class="btn btn-primary">
+                            Send Message
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                    <div class="contact-buttons">
+                        <a href="assets/Talampas_Ezekiel_Resume.pdf" class="contact-btn" download>
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Resume
+                        </a>
+                        <a href="https://github.com/kieltalampas" class="contact-btn" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&to=kielctalampas@gmail.com" class="contact-btn" target="_blank">
+                            <i class="fa-solid fa-envelope"></i>
+                            Email
+                        </a>
+                        <a href="https://www.linkedin.com/in/ezekielctalampas/" class="contact-btn" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ezekiel Talampas. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const message = document.getElementById('contactMessage').value;
+
+            const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+            const body = encodeURIComponent(`${message}\n\nFrom: ${name} (${email})`);
+            window.location.href = `mailto:kielctalampas@gmail.com?subject=${subject}&body=${body}`;
+        });
+    </script>
+</body>
+</html>
