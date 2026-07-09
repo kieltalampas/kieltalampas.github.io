@@ -1,0 +1,201 @@
+/* Experience Tab Toggle */
+.tab-toggle {
+    display: inline-flex;
+    padding: 0.3rem;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    gap: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    background: #D8D9DB;
+    color: #17181A;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+    animation: fadeInUp 0.35s ease-out;
+}
+
+/* Education / Work list cards */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.education-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.75rem;
+    transition: all 0.25s ease;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.education-item:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px var(--shadow-color);
+}
+
+.education-item.no-icon {
+    grid-template-columns: 1fr;
+}
+
+.education-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 0.2rem;
+}
+
+.education-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.education-icon i {
+    font-size: 1.6rem;
+    color: var(--primary);
+}
+
+.education-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.education-title {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.education-subtitle {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.education-school {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.education-date {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+/* Certification Card Grid */
+.cert-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.cert-card {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+}
+
+.cert-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.cert-image-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--bg-card);
+    border: 1px dashed var(--border-hover);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+}
+
+.cert-image-placeholder i {
+    font-size: 1.4rem;
+}
+
+.cert-card-name {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    min-height: 2.2em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.35rem;
+}
+
+.cert-card-issuer {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.cert-view-btn {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    background: var(--primary);
+    color: var(--bg-body);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.cert-view-btn:hover {
+    background: var(--primary-alt);
+}

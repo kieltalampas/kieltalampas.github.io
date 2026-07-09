@@ -1,0 +1,44 @@
+.skills-tile-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.skill-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1.5rem 1rem;
+    background: var(--bg-card);
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.skill-tile:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px var(--shadow-color);
+}
+
+.skill-tile i,
+.skill-tile img {
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    color: var(--text-primary);
+}
+
+.skill-logo-img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
+
+.skill-name {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+}

@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #A63A32;
+    --primary-alt: #8B2F28;
+    --bg-body: #FAFAFA;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F0F0F0;
+    --bg-subtle: #F1F1F1;
+    --text-primary: #17181A;
+    --text-secondary: #53565A;
+    --text-muted: #8B8E92;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --border-hover: rgba(0, 0, 0, 0.25);
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --header-bg: rgba(250, 250, 250, 0.85);
+}
+
+[data-theme="dark"] {
+    --primary: #D9564C;
+    --primary-alt: #C0453C;
+    --bg-body: #101112;
+    --bg-card: #191A1B;
+    --bg-hover: #212223;
+    --bg-subtle: #1C1D1E;
+    --text-primary: #F2F2F2;
+    --text-secondary: #B4B6B8;
+    --text-muted: #7A7C7F;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --border-hover: rgba(255, 255, 255, 0.25);
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --header-bg: rgba(16, 17, 18, 0.85);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg-body);
+    color: var(--text-primary);
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mono {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Main Content */
+main {
+    position: relative;
+}
+
+.content-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Sections */
+section {
+    margin-bottom: 6rem;
+    animation: fadeInUp 0.5s ease-out;
+    scroll-margin-top: 100px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    font-size: 1.9rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-primary);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.btn {
+    padding: 0.9rem 1.7rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary {
+    background: var(--text-primary);
+    color: var(--bg-body);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px var(--shadow-color);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}

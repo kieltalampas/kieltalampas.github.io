@@ -1,0 +1,212 @@
+/* Tablet & Below (≤ 1024px) */
+@media (max-width: 1024px) {
+    .header-inner {
+        padding: 1.1rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    section {
+        scroll-margin-top: 80px;
+    }
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 65px;
+        left: 0;
+        right: 0;
+        transform: none;
+        width: 100%;
+        height: auto;
+        max-height: calc(100vh - 65px);
+        background: var(--bg-body);
+        border-bottom: 1px solid var(--border-color);
+        padding: 0.5rem 0;
+        overflow-y: auto;
+        z-index: 99;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+    }
+
+    nav a {
+        padding: 1rem 1.5rem;
+        border-radius: 0;
+        font-size: 1rem;
+    }
+
+    .content-wrapper {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-subtitle,
+    .hero-intro {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .skills-tile-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .education-item {
+        padding: 1.5rem;
+    }
+
+    section {
+        margin-bottom: 4.5rem;
+    }
+
+    footer {
+        padding: 1.75rem 1.5rem;
+    }
+}
+
+/* Mobile (< 640px) */
+@media (max-width: 640px) {
+    .header-inner {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .header-actions {
+        gap: 0.4rem;
+    }
+
+    .theme-toggle,
+    .header-btn {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .content-wrapper {
+        padding: 2rem 1.25rem;
+    }
+
+    section {
+        margin-bottom: 3.5rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+        line-height: 1.25;
+    }
+
+    .hero-subtitle,
+    .hero-intro {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.65rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 170px;
+        height: 170px;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .skills-tile-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+    }
+
+    .education-item {
+        grid-template-columns: 56px 1fr;
+        gap: 1rem;
+        padding: 1.25rem;
+    }
+
+    .education-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .education-icon img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .education-title {
+        font-size: 1.05rem;
+    }
+
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+}
