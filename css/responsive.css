@@ -16,35 +16,40 @@
     nav {
         display: none;
         position: fixed;
-        top: 65px;
-        left: 0;
-        right: 0;
+        top: 72px;
+        left: 1rem;
+        right: 1rem;
         transform: none;
-        width: 100%;
+        width: auto;
         height: auto;
-        max-height: calc(100vh - 65px);
-        background: var(--bg-body);
-        border-bottom: 1px solid var(--border-color);
-        padding: 0.5rem 0;
-        overflow-y: auto;
+        max-height: none;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 18px;
+        padding: 0.6rem;
+        box-shadow: 0 16px 40px var(--shadow-color);
+        overflow: visible;
         z-index: 99;
     }
 
     nav.active {
         display: flex;
+        animation: fadeInUp 0.2s ease-out;
     }
 
     nav ul {
         flex-direction: column;
         align-items: stretch;
-        gap: 0;
+        gap: 0.2rem;
         width: 100%;
     }
 
     nav a {
-        padding: 1rem 1.5rem;
-        border-radius: 0;
+        display: block;
+        padding: 0.85rem 1.1rem;
+        border-radius: 12px;
         font-size: 1rem;
+        text-align: center;
     }
 
     .content-wrapper {
@@ -155,9 +160,13 @@
     }
 
     .hero-buttons {
-        flex-direction: column;
+        justify-content: center;
         width: 100%;
         gap: 0.65rem;
+    }
+
+    .hero-buttons .btn {
+        width: auto;
     }
 
     .btn {

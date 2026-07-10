@@ -24,6 +24,7 @@
 
 .tab-btn:hover {
     color: var(--text-primary);
+    background: var(--bg-hover);
 }
 
 .tab-btn.active {
@@ -82,6 +83,11 @@
     flex-shrink: 0;
     overflow: hidden;
     padding: 0.2rem;
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover .education-icon {
+    transform: scale(1.06);
 }
 
 .education-icon img {
@@ -144,20 +150,33 @@
 
 .cert-card:hover {
     border-color: var(--border-hover);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px var(--shadow-color);
 }
 
 .cert-image-placeholder {
     width: 100%;
     aspect-ratio: 4 / 3;
     background: var(--bg-card);
-    border: 1px dashed var(--border-hover);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-muted);
     margin-bottom: 0.6rem;
+    overflow: hidden;
+}
+
+.cert-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.cert-card:hover .cert-image-placeholder img {
+    transform: scale(1.06);
 }
 
 .cert-image-placeholder i {
@@ -198,4 +217,5 @@
 
 .cert-view-btn:hover {
     background: var(--primary-alt);
+    transform: translateY(-1px);
 }

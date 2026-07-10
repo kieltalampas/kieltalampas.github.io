@@ -5,6 +5,7 @@
 }
 
 .project-item {
+    position: relative;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 16px;
@@ -12,6 +13,23 @@
     transition: all 0.25s ease;
     display: flex;
     flex-direction: column;
+}
+
+.project-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover::before {
+    transform: scaleX(1);
 }
 
 .project-item:hover {
@@ -38,6 +56,11 @@
     height: 100%;
     object-fit: contain;
     padding: 1.25rem;
+    transition: transform 0.4s ease;
+}
+
+.project-item:hover .project-image img {
+    transform: scale(1.05);
 }
 
 .project-content {
@@ -101,6 +124,12 @@
     font-size: 0.78rem;
     font-weight: 600;
     border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
 }
 
 .tag i,

@@ -19,7 +19,7 @@
 
 .skill-tile:hover {
     border-color: var(--border-hover);
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     box-shadow: 0 12px 24px var(--shadow-color);
 }
 
@@ -29,6 +29,12 @@
     width: 2rem;
     height: 2rem;
     color: var(--text-primary);
+    transition: transform 0.25s ease;
+}
+
+.skill-tile:hover i,
+.skill-tile:hover img {
+    transform: scale(1.12);
 }
 
 .skill-logo-img {

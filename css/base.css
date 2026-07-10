@@ -38,6 +38,8 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-hover) transparent;
 }
 
 body {
@@ -46,6 +48,29 @@ body {
     color: var(--text-primary);
     min-height: 100vh;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+    background: var(--primary);
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-hover);
+    border-radius: 999px;
+    border: 2px solid var(--bg-body);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
 }
 
 .mono {
@@ -102,6 +127,14 @@ section {
     gap: 0.6rem;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
+}
+
+.btn i {
+    transition: transform 0.25s ease;
+}
+
+.btn:hover i {
+    transform: translateX(3px);
 }
 
 .btn-primary {

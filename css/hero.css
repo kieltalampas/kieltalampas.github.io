@@ -17,6 +17,7 @@
     gap: 1.1rem;
 }
 
+
 .hero h1 {
     font-size: 3.2rem;
     line-height: 1.15;
@@ -46,12 +47,14 @@
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.75rem;
     flex-wrap: wrap;
     margin-top: 0.5rem;
 }
 
 .hero-image {
+    position: relative;
     width: 220px;
     height: 220px;
     border-radius: 50%;
@@ -63,10 +66,22 @@
     overflow: hidden;
     flex-shrink: 0;
     box-shadow: 0 20px 40px var(--shadow-color);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px var(--shadow-color);
 }
 
 .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
 }
+
+.hero-image:hover img {
+    transform: scale(1.06);
+}
+

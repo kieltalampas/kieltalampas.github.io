@@ -39,6 +39,11 @@ header::before {
     letter-spacing: -0.02em;
     white-space: nowrap;
     flex-shrink: 0;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+    opacity: 0.75;
 }
 
 .logo span {
@@ -107,6 +112,15 @@ nav a:hover {
     background: var(--bg-hover);
     border-color: var(--border-hover);
     color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.theme-toggle i {
+    transition: transform 0.35s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(20deg);
 }
 
 /* Hamburger Menu Button */
