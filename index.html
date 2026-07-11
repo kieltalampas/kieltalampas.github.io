@@ -192,6 +192,61 @@
             <section id="projects">
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="projects-grid">
+                    <!-- Thesis (placeholder) -->
+                    <div class="project-item">
+                        <div class="project-image project-image-placeholder">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Undergraduate Thesis</h3>
+                            </div>
+                            <p class="project-description">
+                                Thesis project details coming soon — full write-up, tech stack, and code will be added here once complete.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">TBD</span>
+                            </div>
+                            <ul class="project-highlights">
+                                <li>More details coming soon</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- WHO Global Disease Outbreak Pipeline (AWS) -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="assets/who-outbreak-pipeline.png" alt="WHO Global Disease Outbreak Pipeline architecture diagram" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-image-placeholder" style="display:none;">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">WHO Global Disease Outbreak Pipeline</h3>
+                            </div>
+                            <p class="project-description">
+                                End-to-end AWS data pipeline processing WHO global disease outbreak data with automated scheduling
+                                and monitoring for analytics reporting.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag"><i class="fa-brands fa-aws" style="color: #FF9900;"></i> AWS Glue</span>
+                                <span class="tag"><i class="fa-brands fa-aws" style="color: #FF9900;"></i> Amazon Redshift</span>
+                                <span class="tag"><i class="devicon-apachespark-original colored"></i> PySpark</span>
+                                <span class="tag"><img src="assets/powerbi.png" alt=""> Power BI</span>
+                            </div>
+                            <ul class="project-highlights">
+                                <li>Built PySpark ETL pipeline in AWS Glue processing 3,500+ disease outbreak records across 90+ diseases and 236 countries</li>
+                                <li>Designed Redshift data warehouse with optimized schema and views for Power BI analytics reporting</li>
+                                <li>Implemented automated weekly scheduling with CloudWatch monitoring for pipeline failure alerts</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/kieltalampas/who-outbreak-pipeline" class="project-link" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- AQI Project -->
                     <div class="project-item">
                         <div class="project-image">
@@ -200,10 +255,6 @@
                         <div class="project-content">
                             <div class="project-header">
                                 <h3 class="project-title">AQI Prediction System</h3>
-                                <a href="https://github.com/kieltalampas/aqi-prediction-system" class="project-link" target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                    View Code
-                                </a>
                             </div>
                             <p class="project-description">
                                 Web-based Air Quality Index classification system built with machine learning
@@ -218,6 +269,16 @@
                                 <li>Applied information gain analysis to rank feature importance of 4 pollutants (PM2.5, O₃, NO₂, CO)</li>
                                 <li>Built multi-page interface with real-time prediction, feature analysis, and history tracking</li>
                             </ul>
+                            <div class="project-links">
+                                <a href="https://aqi-prediction-mvc-flask-r8v1.vercel.app/" class="project-link" target="_blank">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/biboy7777/AQI-Prediction-MVC-Flask" class="project-link" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <!-- Stock Project -->
@@ -228,10 +289,6 @@
                         <div class="project-content">
                             <div class="project-header">
                                 <h3 class="project-title">Stock Price Analytics Pipeline</h3>
-                                <a href="https://github.com/kieltalampas/stock-price-analytics-pipeline" class="project-link" target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                    View Code
-                                </a>
                             </div>
                             <p class="project-description">
                                 End-to-end analytics pipeline transforming raw stock market data into optimized
@@ -248,63 +305,12 @@
                                 <li>Implemented fact and dimension tables for analytics optimization</li>
                                 <li>Loaded curated data into Snowflake for BI reporting</li>
                             </ul>
-                        </div>
-                    </div>
-                    <!-- Spotify Project -->
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="assets/proj2.png" alt="Azure Spotify Pipeline">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Azure Spotify Data Pipeline</h3>
-                                <a href="https://github.com/kieltalampas/azure-spotify-project" class="project-link" target="_blank">
+                            <div class="project-links">
+                                <a href="https://github.com/kieltalampas/stock-price-analytics-pipeline" class="project-link" target="_blank">
                                     <i class="fa-brands fa-github"></i>
                                     View Code
                                 </a>
                             </div>
-                            <p class="project-description">
-                                Cloud-native incremental data pipeline leveraging Azure services and Databricks
-                                for efficient large-scale data processing with quality enforcement.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag"><i class="devicon-azure-plain colored"></i> Azure Data Factory</span>
-                                <span class="tag"><img src="assets/db.png" alt=""> Databricks</span>
-                            </div>
-                            <ul class="project-highlights">
-                                <li>Designed watermark-based incremental ingestion from Azure SQL</li>
-                                <li>Processed data using PySpark and Auto Loader for automation</li>
-                                <li>Implemented star schema modeling with data quality expectations</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Airbnb Project -->
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="assets/proj3.png" alt="Airbnb NYC Analytics Dashboard">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Airbnb NYC Analytics Dashboard</h3>
-                                <a href="https://github.com/kieltalampas/airbnb-nyc-analytics" class="project-link" target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                    View Code
-                                </a>
-                            </div>
-                            <p class="project-description">
-                                Interactive analytics dashboard analyzing 41,697 NYC Airbnb listings with multi-dimensional
-                                insights using cloud data warehouse and business intelligence tools.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag"><img src="assets/snowflake.png" alt=""> Snowflake</span>
-                                <span class="tag"><img src="assets/powerbi.png" alt=""> Power BI</span>
-                                <span class="tag"><i class="devicon-mysql-plain colored"></i> SQL</span>
-                            </div>
-                            <ul class="project-highlights">
-                                <li>Loaded 41,697 listings into Snowflake cloud data warehouse</li>
-                                <li>Created 8+ visualizations tracking market metrics across neighborhoods and room types</li>
-                                <li>Implemented interactive filters for stakeholder drill-down analysis</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
