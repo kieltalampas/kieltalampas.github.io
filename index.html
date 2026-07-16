@@ -29,68 +29,62 @@
 </head>
 <body>
 
-    <!-- Header/Top Bar -->
-    <header>
-        <div class="header-inner">
-            <div class="logo">Kiel<span>.</span></div>
-
-            <nav>
-                <ul>
-                    <li><a href="#hero" class="nav-link">Home</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                </ul>
-            </nav>
-
-            <div class="header-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
+    <div class="page-layout">
+        <!-- Sidebar (static/sticky on desktop, collapses to a compact header on mobile) -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">Kiel<span>.</span></div>
                 <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
             </div>
-        </div>
-    </header>
 
-    <!-- Main Content -->
-    <main>
-        <div class="content-wrapper">
-            <!-- Hero Section (includes short intro/about) -->
-            <section id="hero">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>Hi, I'm <span>Kiel</span></h1>
-                        <p class="hero-subtitle">Data Analytics & Engineering | Building analytics solutions with SQL, Power BI, and cloud platforms</p>
-                        <p class="hero-intro">
-                            Computer Science student at Mapua Malayan Colleges Laguna specializing in Data Science &amp; Analytics —
-                            I like turning messy data into pipelines, warehouses, and dashboards people can actually use.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="assets/Talampas_Ezekiel_Resume.pdf" class="btn btn-primary" download>
-                                Resume
-                                <i class="fa-solid fa-file-arrow-down"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/ezekielctalampas/" class="header-btn" target="_blank" title="LinkedIn">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/kieltalampas" class="header-btn" target="_blank" title="GitHub">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                            <a href="https://mail.google.com/mail/?view=cm&to=kielctalampas@gmail.com" class="header-btn" target="_blank" title="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <img src="assets\IMG_0099-removebg-preview.png" alt="Ezekiel Talampas">
-                    </div>
+            <div class="hero-image">
+                <img src="assets/IMG_0099-removebg-preview.png" alt="Ezekiel Talampas">
+            </div>
+
+            <div class="hero-text">
+                <h1>Hi, I'm <span>Kiel</span></h1>
+                <p class="hero-subtitle">Data Analytics & Engineering | Building analytics solutions with SQL, Power BI, and cloud platforms</p>
+                <p class="hero-intro">
+                    Computer Science student at Mapua Malayan Colleges Laguna specializing in Data Science &amp; Analytics —
+                    I like turning messy data into pipelines, warehouses, and dashboards people can actually use.
+                </p>
+                <div class="hero-buttons">
+                    <a href="assets/Talampas_Ezekiel_Resume.pdf" class="btn btn-primary" download>
+                        Resume
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ezekielctalampas/" class="header-btn" target="_blank" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/kieltalampas" class="header-btn" target="_blank" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&to=kielctalampas@gmail.com" class="header-btn" target="_blank" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
                 </div>
-            </section>
+            </div>
 
+            <nav>
+                <ul>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                </ul>
+            </nav>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </aside>
+
+        <!-- Scrollable content column -->
+        <main class="content-column">
+            <div class="view active" id="view-main">
             <!-- Experience Section -->
             <section id="experience">
                 <h2 class="section-title">Experience</h2>
@@ -116,9 +110,9 @@
                                     <li>Built automated Power BI dashboards tracking daily, weekly, monthly, and quarterly Yield and PPM metrics across multiple production departments (Finishing, Test, ODIFF), integrating data from multiple source folders spanning 2024–2026</li>
                                     <li>Collaborated with process engineers and department supervisors to gather production data, define system requirements, and iteratively deliver features including CRUD functionality, admin access control, and multi-year historical trend analysis</li>
                                 </ul>
-                                <a href="assets/Talampas_FinalReport.pdf" class="project-link" download style="margin-top: 0.5rem;">
-                                    <i class="fa-solid fa-file-pdf"></i> Download Full Internship Report
-                                </a>
+                                <button class="project-link view-details-btn" id="seeInternshipDetails" style="margin-top: 0.5rem;">
+                                    See full details <i class="fa-solid fa-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -350,26 +344,28 @@
                     </div>
                 </div>
             </section>
-        </div>
-    </main>
+            </div>
 
-    <!-- Footer -->
-    <footer>
-        <p class="footer-copy">&copy; 2026 Ezekiel Talampas</p>
-        <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/ezekielctalampas/" class="header-btn" target="_blank" title="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/kieltalampas" class="header-btn" target="_blank" title="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://mail.google.com/mail/?view=cm&to=kielctalampas@gmail.com" class="header-btn" target="_blank" title="Email">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </div>
-    </footer>
+            <!-- Internship Detail View -->
+            <div class="view" id="view-internship">
+                <button class="back-link" id="internshipBack">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Experience
+                </button>
+                <h2 class="section-title">Internship</h2>
+
+                <a href="assets/Talampas_FinalReport.pdf" class="project-link" download>
+                    <i class="fa-solid fa-file-pdf"></i> Download Full Internship Report
+                </a>
+            </div>
+
+            <footer>
+                <p class="footer-copy">&copy; 2026 Ezekiel Talampas</p>
+            </footer>
+        </main>
+    </div>
 
     <script src="js/theme.js?v=5" defer></script>
+    <script src="js/views.js?v=5" defer></script>
     <script src="js/nav.js?v=5" defer></script>
     <script src="js/tabs.js?v=5" defer></script>
 </body>

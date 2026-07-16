@@ -1,35 +1,8 @@
-/* Header - full-bleed blurred backdrop via ::before, content constrained to
-   the same max-width as page content so nav sits flush with it (no edge-to-edge
-   divider line). The blur/background live on ::before rather than on `header`
-   itself because a `backdrop-filter`/`filter` on an ancestor creates a new
-   containing block for `position: fixed` descendants — that broke the mobile
-   nav dropdown by confining it to the header's small box instead of the
-   viewport. Keeping `header` filter-free avoids that. */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--header-bg);
-    backdrop-filter: blur(12px);
-    z-index: -1;
-}
-
-.header-inner {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 1.1rem 2rem;
+/* Sidebar top row: logo + mobile hamburger */
+.sidebar-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    position: relative;
 }
 
 .logo {
@@ -50,43 +23,28 @@ header::before {
     color: var(--primary);
 }
 
-/* Navigation, centered against .header-inner (same width as page content) */
-nav {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-}
-
+/* Vertical nav inside the sidebar (desktop) */
 nav ul {
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
 nav a {
     color: var(--text-secondary);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.55rem 1rem;
-    border-radius: 999px;
+    padding: 0.6rem 0.9rem;
+    border-radius: 10px;
     transition: all 0.25s ease;
     font-size: 0.92rem;
+    display: block;
 }
 
 nav a:hover {
     color: var(--text-primary);
     background: var(--bg-hover);
-}
-
-.header-actions {
-    display: flex;
-    gap: 0.6rem;
-    align-items: center;
-    flex-shrink: 0;
 }
 
 .theme-toggle,
@@ -155,17 +113,11 @@ nav a:hover {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Footer */
+/* Footer (sits at the bottom of the scrollable content column) */
 footer {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 0 0;
+    margin-top: 2rem;
     border-top: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
 }
 
 .footer-copy {
