@@ -33,7 +33,9 @@
         <!-- Sidebar (static/sticky on desktop, collapses to a compact header on mobile) -->
         <aside class="sidebar">
             <div class="sidebar-top">
-                <div class="logo">Kiel<span>.</span></div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
                 <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
                     <span></span>
@@ -50,7 +52,7 @@
                 <p class="hero-subtitle">Data Analytics & Engineering | Building analytics solutions with SQL, Power BI, and cloud platforms</p>
                 <p class="hero-intro">
                     Computer Science student at Mapua Malayan Colleges Laguna specializing in Data Science &amp; Analytics —
-                    I like turning messy data into pipelines, warehouses, and dashboards people can actually use.
+                    I specialize in turning messy data into pipelines, warehouses, and dashboards people can actually use.
                 </p>
                 <div class="hero-buttons">
                     <a href="assets/Talampas_Ezekiel_Resume.pdf" class="btn btn-primary" download>
@@ -72,14 +74,11 @@
             <nav>
                 <ul>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#" class="nav-link" id="navInternship">Internship</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                 </ul>
             </nav>
-
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
-                <i class="fa-solid fa-moon"></i>
-            </button>
         </aside>
 
         <!-- Scrollable content column -->
@@ -107,7 +106,7 @@
                                 <p class="education-date">May 2026 – Jul 2026</p>
                                 <ul class="project-highlights" style="margin-top: 0.75rem;">
                                     <li>Developed a full-stack internal web portal using Flask and SQLite to centralize product reference documentation for the Ops 2/3 department, replacing a scattered multi-file system with a single authenticated platform</li>
-                                    <li>Built automated Power BI dashboards tracking daily, weekly, monthly, and quarterly Yield and PPM metrics across multiple production departments (Finishing, Test, ODIFF), integrating data from multiple source folders spanning 2024–2026</li>
+                                    <li>Built automated Power BI dashboards tracking daily, weekly, monthly, and quarterly Yield and PPM metrics across multiple production departments (Finishing and Test), integrating data from multiple source folders spanning 2024–2026</li>
                                     <li>Collaborated with process engineers and department supervisors to gather production data, define system requirements, and iteratively deliver features including CRUD functionality, admin access control, and multi-year historical trend analysis</li>
                                 </ul>
                                 <button class="project-link view-details-btn" id="seeInternshipDetails" style="margin-top: 0.5rem;">
@@ -188,19 +187,22 @@
                 <div class="projects-grid">
                     <!-- Thesis: MakiPrint -->
                     <div class="project-item">
-                        <div class="project-image project-image-placeholder">
-                            <i class="fa-solid fa-graduation-cap"></i>
+                        <div class="project-image">
+                            <img src="assets/thesisproj.jpg" alt="MakiPrint" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-image-placeholder" style="display:none;">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
                         </div>
                         <div class="project-content">
                             <div class="project-header">
                                 <h3 class="project-title">MakiPrint</h3>
                             </div>
                             <p class="project-description">
-                                ink-classification  paired with a full-stack printing management
+                                Ink-classification Data Annotation tool paired with a full-stack printing management
                                 platform.
                             </p>
                             <ul class="project-highlights">
-                                <li>Built a tool to label 1,780 document images by ink intensity for training data</li>
+                                <li>Built an Annotation tool to label 1,780 document images by ink intensity for training data</li>
                                 <li>Trained a machine learning model to classify ink usage with over 95% accuracy</li>
                                 <li>Built a full-stack platform for cost estimation, payments, and order management</li>
                             </ul>
@@ -351,9 +353,56 @@
                 <button class="back-link" id="internshipBack">
                     <i class="fa-solid fa-arrow-left"></i> Back to Experience
                 </button>
-                <h2 class="section-title">Internship</h2>
 
-                <a href="assets/Talampas_FinalReport.pdf" class="project-link" download>
+                <div class="internship-header">
+                    <h2 class="section-title">Software Engineering Intern</h2>
+                    <p class="internship-company">STMicroelectronics</p>
+                    <div class="internship-meta">
+                        <span><i class="fa-solid fa-calendar"></i> May 2026 – Jul 2026</span>
+                        <span><i class="fa-solid fa-diagram-project"></i> Ops 2/3, B2F2 Manufacturing Operations and Process Engineering</span>
+                        <span><i class="fa-solid fa-clock"></i> 480 hours</span>
+                    </div>
+                    <p class="internship-summary">
+                        STMicroelectronics is a European multinational semiconductor company and, by revenue, the largest semiconductor
+                        manufacturer in Europe. I completed my internship at their Calamba, Laguna facility, one of the company's key
+                        back-end manufacturing sites in the Asia-Pacific region.
+                    </p>
+                </div>
+
+                <div class="internship-project">
+                    <h3 class="internship-project-title">
+                        <i class="fa-solid fa-folder-tree"></i> TNF Reference Portal
+                    </h3>
+                    <ul class="project-highlights">
+                        <li>Built an internal web portal using Flask and SQLite to replace a scattered, file-based system for product documentation</li>
+                        <li>Consolidated product overview, process flow, materials, documentation, and deployment details into a single searchable platform</li>
+                        <li>Implemented full CRUD functionality, employee-based authentication, and an admin panel for department-wide access control</li>
+                        <li>Designed the system for handover, allowing the department to maintain it independently after the internship</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt=""> Python</span>
+                        <span class="tag"><i class="fa-solid fa-flask"></i> Flask</span>
+                        <span class="tag"><i class="fa-solid fa-database"></i> SQLite</span>
+                    </div>
+                </div>
+
+                <div class="internship-project">
+                    <h3 class="internship-project-title">
+                        <i class="fa-solid fa-chart-column"></i> PPM and Yield Dashboards
+                    </h3>
+                    <ul class="project-highlights">
+                        <li>Automated a manual, weekend-long PPM and yield reporting process by building four Power BI dashboards (PPM and Yield, for both Finishing and Test)</li>
+                        <li>Added slicers for year, lot type, product, and step name, along with KPI cards and trend charts on each dashboard</li>
+                        <li>Integrated over two years of historical production data by linking current daily records with archived weekly and monthly folders</li>
+                        <li>Debugged a data mismatch against engineers' reports by manually validating formulas, tracing the issue to step name filtering</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag"><img src="assets/powerbi.png" alt=""> Power BI</span>
+                        <span class="tag"><i class="fa-solid fa-table"></i> Data Modeling</span>
+                    </div>
+                </div>
+
+                <a href="assets/Talampas_FinalReport.pdf" class="project-link internship-download" download>
                     <i class="fa-solid fa-file-pdf"></i> Download Full Internship Report
                 </a>
             </div>

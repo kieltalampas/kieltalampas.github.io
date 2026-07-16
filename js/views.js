@@ -4,6 +4,7 @@ const viewMain = document.getElementById('view-main');
 const viewInternship = document.getElementById('view-internship');
 const seeInternshipDetails = document.getElementById('seeInternshipDetails');
 const internshipBack = document.getElementById('internshipBack');
+const navInternship = document.getElementById('navInternship');
 
 function showInternshipView() {
     viewMain.classList.remove('active');
@@ -19,9 +20,15 @@ function showMainView() {
 seeInternshipDetails.addEventListener('click', showInternshipView);
 internshipBack.addEventListener('click', showMainView);
 
-// Sidebar nav links (Experience/Projects/Skills) should return to the main
-// view before scrolling, in case the Internship view is currently showing.
+navInternship.addEventListener('click', (e) => {
+    e.preventDefault();
+    showInternshipView();
+});
+
+// Other sidebar nav links (Experience/Projects/Skills) should return to the
+// main view before scrolling, in case the Internship view is currently showing.
 document.querySelectorAll('.nav-link').forEach(link => {
+    if (link === navInternship) return;
     link.addEventListener('click', () => {
         if (viewInternship.classList.contains('active')) showMainView();
     });

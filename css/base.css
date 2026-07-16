@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 :root {
@@ -38,8 +39,6 @@
 
 html {
     scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scrollbar-color: var(--border-hover) transparent;
 }
 
 body {
@@ -55,54 +54,44 @@ body {
     color: #fff;
 }
 
+/* Scrolling stays functional everywhere; the scrollbar itself is just hidden. */
 ::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--border-hover);
-    border-radius: 999px;
-    border: 2px solid var(--bg-body);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
+    display: none;
 }
 
 .mono {
     font-family: 'Roboto Mono', monospace;
 }
 
-/* Two-column layout: static/sticky sidebar + scrollable content column */
+/* Two-column layout: fixed sidebar (truly static, never scrolls with the page)
+   + scrollable content column. The sidebar is taken out of flow via
+   `position: fixed` rather than `sticky` because `sticky` only holds while its
+   containing block (.page-layout) still has room below it — since
+   .page-layout's height matches the much-taller content column, the sidebar
+   would unstick and scroll away in the final stretch of the page (right where
+   the footer is). Fixed positioning has no such containing-block limit. */
 .page-layout {
-    display: grid;
-    grid-template-columns: minmax(280px, 360px) 1fr;
-    align-items: start;
-    gap: 3.5rem;
     max-width: 1240px;
     margin: 0 auto;
     padding: 4rem 2rem;
 }
 
 .sidebar {
-    position: sticky;
+    position: fixed;
     top: 4rem;
+    left: max(2rem, calc((100vw - 1240px) / 2 + 2rem));
+    width: 320px;
     max-height: calc(100vh - 6rem);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
-    scrollbar-width: thin;
-    scrollbar-color: var(--border-hover) transparent;
 }
 
 main.content-column {
     position: relative;
     min-width: 0;
+    margin-left: calc(320px + 3.5rem);
 }
 
 /* Sections */

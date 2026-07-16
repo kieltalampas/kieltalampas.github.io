@@ -1,15 +1,19 @@
-/* Tablet & Below (≤ 1024px): sidebar collapses to a normal top block, stops being sticky */
+/* Tablet & Below (≤ 1024px): sidebar collapses to a normal top block, stops being fixed */
 @media (max-width: 1024px) {
     .page-layout {
-        grid-template-columns: 1fr;
         padding: 2.5rem 1.5rem;
-        gap: 2rem;
     }
 
     .sidebar {
         position: static;
+        left: auto;
+        width: auto;
         max-height: none;
         overflow: visible;
+    }
+
+    main.content-column {
+        margin-left: 0;
     }
 
     .hamburger-btn {

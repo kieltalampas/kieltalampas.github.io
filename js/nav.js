@@ -33,7 +33,7 @@ document.addEventListener('click', (e) => {
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
-        if (!href.startsWith('#')) return;
+        if (!href.startsWith('#') || href === '#') return;
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) target.scrollIntoView({ behavior: 'smooth' });
